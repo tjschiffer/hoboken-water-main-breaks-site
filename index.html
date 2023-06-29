@@ -37,14 +37,14 @@
     </style>
   </head>
   <body>
-    <div id="message">It has been <span class="bold"><span id="numberOfDays"></span> days </span>since the last water main break in Hoboken.</div>
+    <div id="message">It has been <span class="bold"><span id="numberOfDays"></span> </span>since the last water main break in Hoboken.</div>
     <div class="twitter-content">
         <a class="twitter-timeline" href="https://twitter.com/CityofHoboken?ref_src=twsrc%5Etfw">Tweets by CityofHoboken</a>
     </div>
 	<script>
         const lastWaterMainBreakDate = "28 Jun 2023";
         const numberOfDays = Math.floor((Date.now() - Date.parse(lastWaterMainBreakDate)) / (1000 * 60 * 60 * 24));
-        document.getElementById("numberOfDays").innerText = numberOfDays;
+        document.getElementById("numberOfDays").innerText = `${numberOfDays} day${numberOfDays !== 1 ? 's' : ''}`;
     </script>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
   </body>
